@@ -18,7 +18,7 @@
                     </tr>
                                      <StudentRow 
                                      v-for="student in students"
-                                      v-bind:key="student.name"
+                                      v-bind:key="student.id"
                                       v-bind:student="student"
                                       v-bind:edit="editTable"
                                       v-on:student-present="studentArrivedOrLeft"
@@ -61,5 +61,15 @@ export default {
 </script>
 
 <style>
-
+#student-table {
+    max-height: 500px;
+    overflow: scroll;
+}
+.present-true {
+    color: gray;
+    font-style: italic;
+}
+.present-false {
+    font-weight: bold;
+}
 </style>
