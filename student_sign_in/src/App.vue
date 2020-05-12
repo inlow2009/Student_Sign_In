@@ -47,10 +47,11 @@ methods: {
   studentArrivedOrLeft(student) {
     this.message = student.present ? 'Welcome, ' : 'Goodbye, '
     this.name = student.name
-  }
-},
+  },
+
 studentDeleted(student) {
   this.students = this.students.filter( s => s != student)
+}
 }
 }
 </script>
