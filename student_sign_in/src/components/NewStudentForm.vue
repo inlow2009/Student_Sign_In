@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="alter alert-danger" v-show="errors.length > 0">
-    <li v-for="error in errors">{{error}}</li>
+        <li v-for="error in errors" v-bind:key="error">{{error}}</li>
 
 </div>
         <div class="card add-student m-2 p-2">

@@ -20,15 +20,17 @@
             </div>
         </div>
     </div>
+
 </template>
 
 <script>
+
 import StudentRow from '@/components/StudentRow.vue'
 
 export default {
     name: 'StudentTable',
     components: { StudentRow },
-    
+
     props:{
         students: Array
     },
