@@ -3,19 +3,26 @@
                       <td>{{student.name}}</td>
                       <td>{{student.starID}}</td>
                       <td><input type="checkbox" v-model="student.present" v-on:change="checked(student)"></td>
-                     </tr>
+                      <td v-show="edit">
+                          <img class="delete-icon" v-on:click="deleteStudent(student)" src="@/assets/delete.png">
+                      </td>
     </tr>
-</template>
+    </template>
 
 <script>
 export default {
     name: 'StudentRow',
     props: {
-        student: Object
+        student: Object,
+        edit: Boolean
     },
     methods: {
         checked(student) {
             this.$emit('student-present', student)
+        },
+        deleteStudent(student) {
+            //todo confirm if user wats to delete
+            this.$emit('delete-student', student)
         }
     }
 }
@@ -29,6 +36,10 @@ export default {
 
 .present-false {
     font-weight: bold;
+}
+
+.delete-icon {
+    height: 30px;
 }
 
 </style>
