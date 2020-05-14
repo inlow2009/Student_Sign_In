@@ -21,8 +21,9 @@ export default {
             this.$emit('student-present', student)
         },
         deleteStudent(student) {
-            //todo confirm if user wats to delete
+            if (confirm('Delete ${'student.name}?')) {
             this.$emit('delete-student', student)
+            }
         }
     }
 }

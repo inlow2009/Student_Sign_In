@@ -18,7 +18,7 @@
                     </tr>
                                      <StudentRow 
                                      v-for="student in students"
-                                      v-bind:key="student.id"
+                                      v-bind:key="student.name"
                                       v-bind:student="student"
                                       v-bind:edit="editTable"
                                       v-on:student-present="studentArrivedOrLeft"
